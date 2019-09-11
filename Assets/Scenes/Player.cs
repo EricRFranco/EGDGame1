@@ -44,7 +44,8 @@ public class Player : MonoBehaviour
         if (canMove)
         {
             float horizontal = Input.GetAxisRaw("Horizontal");
-            _rb.velocity = new Vector2(horizontal * speed, _rb.velocity.y);
+            float speedFactor = (!inAir) ? speed : speed / 2f;
+            _rb.velocity = new Vector2(horizontal * speedFactor, _rb.velocity.y);
         }
 
         if (canJump && Input.GetKeyDown(KeyCode.Space) && !inAir)
