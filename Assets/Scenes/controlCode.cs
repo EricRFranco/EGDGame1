@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class controlCode : MonoBehaviour
 {
+    public int num_coins = 0;
+    public int num_points = 0;
     public bool map_visible = false;
     public bool map_hit_box = false;
     public bool can_jump = false;
@@ -18,9 +20,5 @@ public class controlCode : MonoBehaviour
     void Update()
     {
         
-    }
-    public bool Getmapvis()
-    {
-        return map_visible;
     }
 }
