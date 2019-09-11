@@ -8,8 +8,9 @@ public class objectHandle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        control = GameObject.Find("Controller");
-
+        //code for accessing the controller components
+        bool vis = control.GetComponent<controlCode>().map_visible;
+        bool hitbox = control.GetComponent<controlCode>().map_hit_box;
     }
 
     // Update is called once per frame
