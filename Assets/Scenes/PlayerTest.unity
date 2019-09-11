@@ -260,6 +260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  jumpForce: 250
+  canMove: 1
+  canJump: 1
 --- !u!1 &972227517
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +277,7 @@ GameObject:
   - component: {fileID: 972227518}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
