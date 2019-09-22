@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
         if (canJump && Input.GetKeyDown(KeyCode.Space) && !inAir)
         {
             _rb.AddForce(new Vector2(0f, jumpForce));
-            inAir = true;
+            
         }
     }
 
@@ -70,12 +70,6 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-            inAir = true;
-    }
-    
-    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")
             inAir = true;
