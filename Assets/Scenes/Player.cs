@@ -20,13 +20,16 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D _rb;
     private Animator anim;
+    private SpriteRenderer sr;
     private bool inAir = false;
+    private bool facingRight = true;
     
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         transform.position = playerSpawnPoint.position;
     }
 
@@ -46,6 +49,13 @@ public class Player : MonoBehaviour
         if (canMove)
         {
             float horizontal = Input.GetAxisRaw("Horizontal");
+            // Flip character sprite around
+            if((horizontal < 0f && facingRight) || (horizontal > 0f && !facingRight))
+            {
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                facingRight = !facingRight;
+            }
+
             float speedFactor = (!inAir) ? speed : speed / 2f;
             _rb.velocity = new Vector2(horizontal * speedFactor, _rb.velocity.y);
         }
