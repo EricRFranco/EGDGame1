@@ -19,12 +19,14 @@ public class Player : MonoBehaviour
     public bool canJump;
 
     private Rigidbody2D _rb;
+    private Animator anim;
     private bool inAir = false;
     
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         transform.position = playerSpawnPoint.position;
     }
 
@@ -47,6 +49,8 @@ public class Player : MonoBehaviour
             float speedFactor = (!inAir) ? speed : speed / 2f;
             _rb.velocity = new Vector2(horizontal * speedFactor, _rb.velocity.y);
         }
+
+        anim.SetFloat("Velocity", Mathf.Abs(_rb.velocity.x));
 
         if (canJump && Input.GetKeyDown(KeyCode.Space) && !inAir)
         {
