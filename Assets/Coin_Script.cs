@@ -9,7 +9,7 @@ public class Coin_Script : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(name, 0) == 1)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         
     }
