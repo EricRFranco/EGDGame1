@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [Header("Feature Activation")]
     public bool canMove;
     public bool canJump;
+    public controlCode control;
 
     private Rigidbody2D _rb;
     private Animator anim;
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        anim.SetBool("Purchased", control.bought_player);
         sr = GetComponent<SpriteRenderer>();
         transform.position = playerSpawnPoint.position;
     }
@@ -65,7 +67,6 @@ public class Player : MonoBehaviour
         if (canJump && Input.GetKeyDown(KeyCode.Space) && !inAir)
         {
             _rb.AddForce(new Vector2(0f, jumpForce));
-            inAir = true;
         }
     }
 
@@ -88,11 +89,6 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
             inAir = true;
     }
-    
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-            inAir = true;
-    }
+   
     
 }
