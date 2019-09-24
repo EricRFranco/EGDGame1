@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         // There are other things at some point probably
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
             inAir = false;

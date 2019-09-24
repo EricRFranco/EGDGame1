@@ -28,15 +28,30 @@ public class objectHandle : MonoBehaviour
                 Renderer mesh = gameObject.GetComponent<Renderer>();
                 mesh.enabled = false;
             }
+            BoxCollider2D[] colliders = gameObject.GetComponentsInChildren<BoxCollider2D>();
             if (hitbox)
             {
                 print("update true working");
-                gameObject.GetComponent<BoxCollider2D>().enabled=true;
+                for(int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].enabled == true)
+                    {
+                        break;
+                    }
+                    colliders[i].enabled = true;
+                }
             }
             else
             {
                 print("update false working");
-                gameObject.GetComponent<BoxCollider2D>().enabled=false;
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].enabled == false)
+                    {
+                        break;
+                    }
+                    colliders[i].enabled = false;
+                }
             }
         }
     }
