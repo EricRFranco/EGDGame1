@@ -32,7 +32,7 @@ public class objectHandle : MonoBehaviour
             if (hitbox)
             {
                 print("update true working");
-                for(int i = 0; i < colliders.Length; i++)
+                for (int i = 0; i < colliders.Length; i++)
                 {
                     if (colliders[i].enabled == true)
                     {
@@ -94,4 +94,30 @@ public class objectHandle : MonoBehaviour
                 }
             }
         }
+        if (string.Equals(tag, "Goal"))
+        {
+            hitbox = control.GetComponent<controlCode>().goal;
+            vis = control.GetComponent<controlCode>().goal;
+            if (vis)
+            {
+                Renderer mesh = gameObject.GetComponent<Renderer>();
+                mesh.enabled = true;
+            }
+            else
+            {
+                Renderer mesh = gameObject.GetComponent<Renderer>();
+                mesh.enabled = false;
+            }
+            if (hitbox)
+            {
+                Collider2D box = gameObject.GetComponent<Collider2D>();
+                box.enabled = true;
+            }
+            else
+            {
+                Collider2D box = gameObject.GetComponent<Collider2D>();
+                box.enabled = false;
+            }
+        }
+    }
 }

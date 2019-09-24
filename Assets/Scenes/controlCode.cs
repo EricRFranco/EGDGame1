@@ -15,6 +15,7 @@ public class controlCode : MonoBehaviour
     public bool can_move = false;
     public bool bought_player = false;
     public bool plats = false;
+    public bool goal = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,10 @@ public class controlCode : MonoBehaviour
         if (PlayerPrefs.GetInt("plats", 0) == 1)
         {
             plats = true;
+        }
+        if (PlayerPrefs.GetInt("goal", 0) == 1)
+        {
+            goal = true;
         }
     }
 
