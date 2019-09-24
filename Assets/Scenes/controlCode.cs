@@ -13,12 +13,13 @@ public class controlCode : MonoBehaviour
     public bool map_hit_box = false;
     public bool can_jump = false;
     public bool can_move = false;
+    public bool bought_player = false;
     // Start is called before the first frame update
     void Start()
     {
         if (PlayerPrefs.GetInt("player", 0) == 0)
         {
-
+            bought_player = true;
         }
         if (PlayerPrefs.GetInt("map", 0) == 1)
         {
