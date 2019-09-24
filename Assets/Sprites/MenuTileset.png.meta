@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: 08d4a1d5d5473cb4b99ecc01251367ac
+guid: 7b36623785e73884688ae14a80e8aa15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7782993819130025641
-    second: EyebatSeqSheet_0
+      213: -4162627399503028713
+    second: MenuTileset_0
   - first:
-      213: 400289663403327754
-    second: EyebatSeqSheet_1
+      213: -8111668475989562891
+    second: MenuTileset_1
   - first:
-      213: -3947798048059979098
-    second: EyebatSeqSheet_2
+      213: 192588757328263767
+    second: MenuTileset_2
   - first:
-      213: 9025234660583251422
-    second: EyebatSeqSheet_3
+      213: 491848413286422959
+    second: MenuTileset_3
   - first:
-      213: -2173550839066339285
-    second: EyebatSeqSheet_4
+      213: -7179145239561053308
+    second: MenuTileset_4
   - first:
-      213: -6971294860112504657
-    second: EyebatSeqSheet_5
+      213: 5875599316248156352
+    second: MenuTileset_5
   - first:
-      213: -6109179942893930730
-    second: EyebatSeqSheet_6
+      213: 5583428926509360660
+    second: MenuTileset_6
   - first:
-      213: -7834202632581805978
-    second: EyebatSeqSheet_7
+      213: -6535730756587003001
+    second: MenuTileset_7
+  - first:
+      213: 7985489705228484609
+    second: MenuTileset_8
+  - first:
+      213: 77479174275814582
+    second: MenuTileset_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -108,13 +114,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EyebatSeqSheet_0
+      name: MenuTileset_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 320
+        width: 1280
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,83 +128,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 854c13cb30eb4c041927acd3b027665d
-      internalID: -7782993819130025641
+      spriteID: 0330a9ac57a219f438e243f7a62abae5
+      internalID: -4162627399503028713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EyebatSeqSheet_1
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 249c309ee49a02945b206d49881a3d1f
-      internalID: 400289663403327754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EyebatSeqSheet_2
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f9361bc13acbac4b9b5d0e584e39179
-      internalID: -3947798048059979098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EyebatSeqSheet_3
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 0
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1f65b3ce20ab7e4b89295ab7c626dc9
-      internalID: 9025234660583251422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EyebatSeqSheet_4
+      name: MenuTileset_1
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
-        width: 320
-        height: 320
+        width: 1280
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c7a6168c02089c4e988c77ea13d04d6
-      internalID: -2173550839066339285
+      spriteID: a1a769dc5fb633741bc56732cf12ff7b
+      internalID: -8111668475989562891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EyebatSeqSheet_5
+      name: MenuTileset_2
       rect:
         serializedVersion: 2
-        x: 1600
+        x: 2560
         y: 0
-        width: 320
-        height: 320
+        width: 1280
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e14368417104bcc42a13b9112845d1e1
-      internalID: -6971294860112504657
+      spriteID: e4974d58801160b43ba6301b1b9eff5a
+      internalID: 192588757328263767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EyebatSeqSheet_6
+      name: MenuTileset_3
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 3840
         y: 0
-        width: 320
-        height: 320
+        width: 1280
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccc650eebbdb0a5418fd196114ff1897
-      internalID: -6109179942893930730
+      spriteID: 9440bdd9997a3374e9476e9ec4a8b7c3
+      internalID: 491848413286422959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EyebatSeqSheet_7
+      name: MenuTileset_4
       rect:
         serializedVersion: 2
-        x: 2240
+        x: 5120
         y: 0
-        width: 320
-        height: 320
+        width: 1280
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,8 +212,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71fc99b8143425246bd2583ff873ab34
-      internalID: -7834202632581805978
+      spriteID: 5e4904168affcc34db73e172358bc352
+      internalID: -7179145239561053308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuTileset_5
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 1280
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b492f035130d7e45ba55a9aef7d7908
+      internalID: 5875599316248156352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuTileset_6
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 1280
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7327926d4d1d86418fb9c1d933007b3
+      internalID: 5583428926509360660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuTileset_7
+      rect:
+        serializedVersion: 2
+        x: 8960
+        y: 0
+        width: 1280
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e135ba210f6bde940b36cf6d02a9fcdb
+      internalID: -6535730756587003001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuTileset_8
+      rect:
+        serializedVersion: 2
+        x: 10240
+        y: 0
+        width: 1280
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848470585eebaa9429dadf88ffafcc83
+      internalID: 7985489705228484609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuTileset_9
+      rect:
+        serializedVersion: 2
+        x: 11520
+        y: 0
+        width: 1280
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc5124b95a55b9498cd14ddbbbd1843
+      internalID: 77479174275814582
       vertices: []
       indices: 
       edges: []
@@ -278,7 +326,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9ed221ffad238f94daad5655aa23bf01
+    spriteID: 4f278ce248f71b548b01fd78b9f6b67c
     internalID: 0
     vertices: []
     indices: 
