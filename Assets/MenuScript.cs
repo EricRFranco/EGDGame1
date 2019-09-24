@@ -9,6 +9,8 @@ public class MenuScript : MonoBehaviour
     {
         PlayerPrefs.SetInt("map", 0);
         PlayerPrefs.SetInt("hitbox", 0);
+        PlayerPrefs.SetInt("plats", 0);
+        PlayerPrefs.SetInt("goal", 0);
         PlayerPrefs.SetInt("jump", 0);
         PlayerPrefs.SetInt("player", 0);
         PlayerPrefs.SetInt("run", 0);
@@ -31,6 +33,14 @@ public class MenuScript : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("hitbox");
         PlayerPrefs.SetInt("hitbox", 1);
+    }
+    public void Plats()
+    {
+        PlayerPrefs.SetInt("plats", 1);
+    }
+    public void Goal()
+    {
+        PlayerPrefs.SetInt("goal", 1);
     }
 
     public void Run()

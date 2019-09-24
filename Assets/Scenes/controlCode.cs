@@ -14,6 +14,7 @@ public class controlCode : MonoBehaviour
     public bool can_jump = false;
     public bool can_move = false;
     public bool bought_player = false;
+    public bool plats = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,10 @@ public class controlCode : MonoBehaviour
         {
             print("hotbox working");
             map_hit_box = true;
+        }
+        if (PlayerPrefs.GetInt("plats", 0) == 1)
+        {
+            plats = true;
         }
         if(PlayerPrefs.GetInt("run", 0) == 1)
         {
