@@ -32,7 +32,7 @@ public class objectHandle : MonoBehaviour
             if (hitbox)
             {
                 print("update true working");
-                for(int i = 0; i < colliders.Length; i++)
+                for (int i = 0; i < colliders.Length; i++)
                 {
                     if (colliders[i].enabled == true)
                     {
@@ -52,6 +52,71 @@ public class objectHandle : MonoBehaviour
                     }
                     colliders[i].enabled = false;
                 }
+            }
+        }
+        if (string.Equals(tag, "Platform"))
+        {
+            hitbox = control.GetComponent<controlCode>().plats;
+            vis = control.GetComponent<controlCode>().plats;
+            if (vis)
+            {
+                Renderer mesh = gameObject.GetComponent<Renderer>();
+                mesh.enabled = true;
+            }
+            else
+            {
+                Renderer mesh = gameObject.GetComponent<Renderer>();
+                mesh.enabled = false;
+            }
+            BoxCollider2D[] colliders = gameObject.GetComponentsInChildren<BoxCollider2D>();
+            if (hitbox)
+            {
+                print("update true working");
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].enabled == true)
+                    {
+                        break;
+                    }
+                    colliders[i].enabled = true;
+                }
+            }
+            else
+            {
+                print("update false working");
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].enabled == false)
+                    {
+                        break;
+                    }
+                    colliders[i].enabled = false;
+                }
+            }
+        }
+        if (string.Equals(tag, "Goal"))
+        {
+            hitbox = control.GetComponent<controlCode>().goal;
+            vis = control.GetComponent<controlCode>().goal;
+            if (vis)
+            {
+                Renderer mesh = gameObject.GetComponent<Renderer>();
+                mesh.enabled = true;
+            }
+            else
+            {
+                Renderer mesh = gameObject.GetComponent<Renderer>();
+                mesh.enabled = false;
+            }
+            if (hitbox)
+            {
+                Collider2D box = gameObject.GetComponent<Collider2D>();
+                box.enabled = true;
+            }
+            else
+            {
+                Collider2D box = gameObject.GetComponent<Collider2D>();
+                box.enabled = false;
             }
         }
     }
