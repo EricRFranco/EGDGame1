@@ -13,6 +13,8 @@ public class controlCode : MonoBehaviour
     public bool map_hit_box = false;
     public bool can_jump = false;
     public bool can_move = false;
+    public bool platform_vis = false;
+    public bool platform_hit = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,15 @@ public class controlCode : MonoBehaviour
             print("hotbox working");
             map_hit_box = true;
         }
+        if (PlayerPrefs.GetInt("vis_plat", 0) == 1)
+        {
+            platform_vis = true;
+        }
+        if (PlayerPrefs.GetInt("box_plat", 0) == 1)
+        {
+            platform_hit = true;
+        }
+
     }
 
     // Update is called once per frame
