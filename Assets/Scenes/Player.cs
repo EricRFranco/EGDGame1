@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         anim.SetBool("Purchased", control.bought_player);
         CheckMovement();
 
-        if(transform.position.y < yThreshold) // Or enemy collision
+        if(transform.position.y < yThreshold || Input.GetKeyDown(KeyCode.R)) // Or enemy collision
         {
             Respawn();
         }
