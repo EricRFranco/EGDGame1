@@ -10,7 +10,7 @@ public class MenuScript : MonoBehaviour
         PlayerPrefs.SetInt("map", 0);
         PlayerPrefs.SetInt("hitbox", 0);
         PlayerPrefs.SetInt("plats", 0);
-        PlayerPrefs.SetInt("plat_box", 0);
+        PlayerPrefs.SetInt("goal", 0);
     }
     public void Play()
     {
@@ -33,8 +33,8 @@ public class MenuScript : MonoBehaviour
     {
         PlayerPrefs.SetInt("plats", 1);
     }
-    public void Plat_Box()
+    public void Goal()
     {
-        PlayerPrefs.SetInt("plat_box", 1);
+        PlayerPrefs.SetInt("goal", 1);
     }
 }
