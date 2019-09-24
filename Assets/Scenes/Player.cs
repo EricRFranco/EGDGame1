@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
         anim.SetBool("Purchased", control.bought_player);
         sr = GetComponent<SpriteRenderer>();
         transform.position = playerSpawnPoint.position;
+        canMove = control.can_move;
+        canJump = control.can_jump;
     }
 
     // Update is called once per frame
