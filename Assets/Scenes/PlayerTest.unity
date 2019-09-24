@@ -1542,7 +1542,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5653878121705019575, guid: f3832311842cd2245b04e5fe4d46486f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1632,6 +1632,7 @@ MonoBehaviour:
   jumpForce: 250
   canMove: 1
   canJump: 1
+  control: {fileID: 1803636964}
 --- !u!1 &918736937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,6 +2536,7 @@ MonoBehaviour:
   map_hit_box: 0
   can_jump: 0
   can_move: 0
+  bought_player: 0
 --- !u!4 &1803636965
 Transform:
   m_ObjectHideFlags: 0

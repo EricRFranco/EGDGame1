@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour
 
     private void CheckMovement()
     {
+        anim.SetBool("InAir", false);
         if (canMove)
         {
             float horizontal = Input.GetAxisRaw("Horizontal");
@@ -67,13 +69,16 @@ public class Player : MonoBehaviour
         if (canJump && Input.GetKeyDown(KeyCode.Space) && !inAir)
         {
             _rb.AddForce(new Vector2(0f, jumpForce));
+            anim.SetBool("InAir", true);
         }
+        
+        
     }
 
     private void Respawn()
     {
         // Return player back to original position
-        transform.position = playerSpawnPoint.position;
+        SceneManager.LoadScene(0);
 
         // There are other things at some point probably
     }
