@@ -19,9 +19,10 @@ public class Coin_Script : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             PlayerPrefs.SetInt(name, 1);
             PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) + 1);

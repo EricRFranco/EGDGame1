@@ -17,7 +17,7 @@ public class controlCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("player", 0) == 0)
+        if (PlayerPrefs.GetInt("player", 0) == 1)
         {
             bought_player = true;
         }
@@ -29,6 +29,14 @@ public class controlCode : MonoBehaviour
         {
             print("hotbox working");
             map_hit_box = true;
+        }
+        if(PlayerPrefs.GetInt("run", 0) == 1)
+        {
+            can_move = true;
+        }
+        if(PlayerPrefs.GetInt("jump", 0) == 1)
+        {
+            can_jump = true;
         }
     }
 

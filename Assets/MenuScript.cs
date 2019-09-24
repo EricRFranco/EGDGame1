@@ -9,6 +9,9 @@ public class MenuScript : MonoBehaviour
     {
         PlayerPrefs.SetInt("map", 0);
         PlayerPrefs.SetInt("hitbox", 0);
+        PlayerPrefs.SetInt("jump", 0);
+        PlayerPrefs.SetInt("player", 0);
+        PlayerPrefs.SetInt("run", 0);
     }
     public void Play()
     {
@@ -16,7 +19,8 @@ public class MenuScript : MonoBehaviour
     }
     public void Player()
     {
-        PlayerPrefs.SetInt("player", 0);
+        PlayerPrefs.DeleteKey("player");
+        PlayerPrefs.SetInt("player", 1);
     }
     public void Map()
     {
@@ -25,6 +29,19 @@ public class MenuScript : MonoBehaviour
     }
     public void Hitbox()
     {
+        PlayerPrefs.DeleteKey("hitbox");
         PlayerPrefs.SetInt("hitbox", 1);
+    }
+
+    public void Run()
+    {
+        PlayerPrefs.DeleteKey("run");
+        PlayerPrefs.SetInt("run", 1);
+    }
+    
+    public void Jump()
+    {
+        PlayerPrefs.DeleteKey("jump");
+        PlayerPrefs.SetInt("jump", 1);
     }
 }

@@ -31,16 +31,16 @@ public class Player : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        anim.SetBool("Purchased", control.bought_player);
         sr = GetComponent<SpriteRenderer>();
         transform.position = playerSpawnPoint.position;
-        canMove = control.can_move;
-        canJump = control.can_jump;
     }
 
     // Update is called once per frame
     void Update()
     {
+        canMove = control.can_move;
+        canJump = control.can_jump;
+        anim.SetBool("Purchased", control.bought_player);
         CheckMovement();
 
         if(transform.position.y < yThreshold) // Or enemy collision
