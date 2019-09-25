@@ -6775,7 +6775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpawnPoint: {fileID: 1432303880}
-  yThreshold: -18
+  yThreshold: -10
   speed: 10
   jumpForce: 250
   canMove: 0
