@@ -8279,7 +8279,7 @@ GameObject:
   - component: {fileID: 1059777262}
   m_Layer: 0
   m_Name: map
-  m_TagString: Ground
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11692,7 +11692,7 @@ GameObject:
   - component: {fileID: 1470674518}
   m_Layer: 0
   m_Name: Floor Colliders
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16751,7 +16751,7 @@ GameObject:
   - component: {fileID: 2077649239}
   m_Layer: 0
   m_Name: Square Platform Colliders
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -18,7 +18,7 @@ public class objectHandle : MonoBehaviour
     {
         bool hitbox = control.GetComponent<controlCode>().map_hit_box;
         bool vis = control.GetComponent<controlCode>().map_visible;
-        if (string.Equals(tag, "Ground"))
+        if (string.Equals(tag, "Map"))
         {
             if (vis)
             {
