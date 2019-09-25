@@ -47,6 +47,10 @@ public class Player : MonoBehaviour
         {
             Respawn();
         }
+        if (Input.GetKeyDown(KeyCode.Q) && PlayerPrefs.GetInt("fly",0)==1)
+        {
+            _rb.AddForce(new Vector2(0f, 2000));
+        }
     }
 
     private void CheckMovement()
@@ -80,7 +84,7 @@ public class Player : MonoBehaviour
     private void Respawn()
     {
         // Return player back to original position
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
 
         // There are other things at some point probably
     }

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class objectHandle : MonoBehaviour
 {
     public GameObject control;
@@ -8,7 +10,7 @@ public class objectHandle : MonoBehaviour
     void Start()
     {
         //code for accessing the controller components
-        
+
     }
 
     // Update is called once per frame
@@ -118,6 +120,13 @@ public class objectHandle : MonoBehaviour
                 Collider2D box = gameObject.GetComponent<Collider2D>();
                 box.enabled = false;
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && string.Equals(tag, "Goal"))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }

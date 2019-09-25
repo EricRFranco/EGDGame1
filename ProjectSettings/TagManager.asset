@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - coin
+  - Goal
   layers:
   - Default
   - TransparentFX

@@ -2,18 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
     private void Start()
     {
-        PlayerPrefs.SetInt("map", 0);
-        PlayerPrefs.SetInt("hitbox", 0);
-        PlayerPrefs.SetInt("plats", 0);
-        PlayerPrefs.SetInt("goal", 0);
-        PlayerPrefs.SetInt("jump", 0);
-        PlayerPrefs.SetInt("player", 0);
-        PlayerPrefs.SetInt("run", 0);
+       
     }
     public void Play()
     {
@@ -21,37 +16,89 @@ public class MenuScript : MonoBehaviour
     }
     public void Player()
     {
-        PlayerPrefs.DeleteKey("player");
-        PlayerPrefs.SetInt("player", 1);
+        if (PlayerPrefs.GetInt("player", 0) == 0 && PlayerPrefs.GetInt("num_coins", 0)>=5)
+        {
+            PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) - 5);
+            PlayerPrefs.DeleteKey("player");
+            PlayerPrefs.SetInt("player", 1);
+        }
     }
     public void Map()
     {
-        PlayerPrefs.DeleteKey("map");
-        PlayerPrefs.SetInt("map", 1);
+        if (PlayerPrefs.GetInt("map", 1) == 0 && PlayerPrefs.GetInt("num_coins", 0) >= 1)
+        {
+            PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) - 1);
+            PlayerPrefs.DeleteKey("map");
+            PlayerPrefs.SetInt("map", 1);
+        }
     }
     public void Hitbox()
     {
-        PlayerPrefs.DeleteKey("hitbox");
-        PlayerPrefs.SetInt("hitbox", 1);
+        if (PlayerPrefs.GetInt("hitbox", 1) == 0 && PlayerPrefs.GetInt("num_coins", 0) >= 1)
+        {
+            PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) - 1);
+            PlayerPrefs.DeleteKey("hitbox");
+            PlayerPrefs.SetInt("hitbox", 1);
+        }
+        
     }
     public void Plats()
     {
-        PlayerPrefs.SetInt("plats", 1);
+        if (PlayerPrefs.GetInt("plats", 1) == 0 && PlayerPrefs.GetInt("num_coins", 0) >= 2)
+        {
+            PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) - 2);
+            PlayerPrefs.SetInt("plats", 1);
+        }
+        
     }
     public void Goal()
     {
-        PlayerPrefs.SetInt("goal", 1);
+        if (PlayerPrefs.GetInt("goal", 1) == 0 && PlayerPrefs.GetInt("num_coins", 0) >= 5)
+        {
+            PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) - 5);
+            PlayerPrefs.SetInt("goal", 1);
+        }
+        
     }
 
     public void Run()
     {
-        PlayerPrefs.DeleteKey("run");
-        PlayerPrefs.SetInt("run", 1);
+        if (PlayerPrefs.GetInt("run", 1) == 0 && PlayerPrefs.GetInt("num_coins", 0) >= 1)
+        {
+            PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) - 1);
+            PlayerPrefs.DeleteKey("run");
+            PlayerPrefs.SetInt("run", 1);
+        }
     }
     
     public void Jump()
     {
-        PlayerPrefs.DeleteKey("jump");
-        PlayerPrefs.SetInt("jump", 1);
+        if (PlayerPrefs.GetInt("jump", 1) == 0 && PlayerPrefs.GetInt("num_coins", 0) >= 1)
+        {
+            PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) - 1);
+            PlayerPrefs.DeleteKey("jump");
+            PlayerPrefs.SetInt("jump", 1);
+        }
+        
+    }
+    public void Sound()
+    {
+        if (PlayerPrefs.GetInt("sound", 1) == 0 && PlayerPrefs.GetInt("num_coins", 0) >= 5)
+        {
+            PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) - 5);
+            PlayerPrefs.DeleteKey("sound");
+            PlayerPrefs.SetInt("sound", 1);
+        }
+
+    }
+    public void Fly()
+    {
+        if (PlayerPrefs.GetInt("fly", 1) == 0 && PlayerPrefs.GetInt("num_coins", 0) >= 5)
+        {
+            PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) - 5);
+            PlayerPrefs.DeleteKey("fly");
+            PlayerPrefs.SetInt("fly", 1);
+        }
+
     }
 }

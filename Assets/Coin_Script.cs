@@ -9,7 +9,10 @@ public class Coin_Script : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(name, 0) == 1)
         {
-            //Destroy(gameObject);
+            Renderer mesh = gameObject.GetComponent<Renderer>();
+            mesh.enabled = false;
+            Collider2D box = gameObject.GetComponent<Collider2D>();
+            box.enabled = false;
         }
         
     }
@@ -26,7 +29,15 @@ public class Coin_Script : MonoBehaviour
         {
             PlayerPrefs.SetInt(name, 1);
             PlayerPrefs.SetInt("num_coins", PlayerPrefs.GetInt("num_coins", 0) + 1);
-            Destroy(gameObject);
+            Renderer mesh = gameObject.GetComponent<Renderer>();
+            mesh.enabled = false;
+            Collider2D box = gameObject.GetComponent<Collider2D>();
+            box.enabled = false;
+            if (PlayerPrefs.GetInt("sound", 0) == 1)
+            {
+                AudioSource audio = GetComponent<AudioSource>();
+                audio.Play();
+            }
         }
     }
 }

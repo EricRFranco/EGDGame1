@@ -19,6 +19,11 @@ public class controlCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt("sound", 0) == 1)
+        {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+        }
         if (PlayerPrefs.GetInt("player", 0) == 1)
         {
             bought_player = true;
@@ -45,6 +50,10 @@ public class controlCode : MonoBehaviour
             can_jump = true;
         }
         if (PlayerPrefs.GetInt("goal", 0) == 1)
+        {
+            goal = true;
+        }
+        if (PlayerPrefs.GetInt("music", 0) == 1)
         {
             goal = true;
         }
